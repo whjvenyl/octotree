@@ -1,7 +1,7 @@
 {
   "name": "octotree",
   "version": "2.1.0",
-  "description": "Code tree for GitHub",
+  "description": "Code tree for GitHub and GitLab",
   "main": "inject.js",
   "scripts": {
     "build": "gulp",

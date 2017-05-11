@@ -174,6 +174,7 @@ function buildJs(overrides, ctx) {
     './src/constants.js',
     './src/adapters/adapter.js',
     './src/adapters/github.js',
+    './src/adapters/gitlab.js',
     './src/view.help.js',
     './src/view.error.js',
     './src/view.tree.js',
