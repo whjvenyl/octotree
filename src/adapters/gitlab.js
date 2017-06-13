@@ -63,6 +63,11 @@ class GitLab extends Adapter {
   }
 
   // @override
+  canLoadEntireTree() {
+    return false
+  }
+
+  // @override
   getMinWidth() {
     return 220 // just enough to hide the GitLab sidebar
   }
@@ -95,8 +100,10 @@ class GitLab extends Adapter {
       return cb()
     }
 
-    const username = match[1]
-    const reponame = match[2]
+    //const username = match[1]
+    //const reponame = match[2]
+    let username = ($('.commit-ref.head-ref').attr('title') || '/').match(/(.*?)\//)[1] || match[1]
+    let reponame = match[2]
     const type = match[3]
 
     // Not a repository, skip
